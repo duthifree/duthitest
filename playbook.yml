@@ -1,0 +1,8 @@
+- name: "Setup tools"
+  hosts: all
+  become: yes
+  tasks:
+    - apt:
+        update_cache: true
+    - apt:
+        name: ['curl', 'oping', 'tmux', 'python3', 'iperf3']
